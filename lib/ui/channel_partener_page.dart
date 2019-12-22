@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:sme/widgets/text_widgets.dart';
 
-class ChannelPartenerPage extends StatefulWidget {
+class ChannelPartnerPage extends StatefulWidget {
   @override
-  _ChannelPartenerPageState createState() => _ChannelPartenerPageState();
+  _ChannelPartnerPageState createState() => _ChannelPartnerPageState();
 }
 
-class _ChannelPartenerPageState extends State<ChannelPartenerPage> {
+class _ChannelPartnerPageState extends State<ChannelPartnerPage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Instantiated Page'),
+      child: Text('Channel Partner Page', style: textHeading(),),
     );
   }
 }
