@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_banner_swiper/flutter_banner_swiper.dart';
-import 'package:sme/widgets/text_widgets.dart';
 import 'package:sme/models/drawer_model.dart';
 
 Widget smeActionBar() {
