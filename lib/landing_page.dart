@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sme/models/drawer_model.dart';
+import 'package:sme/ui/about_page.dart';
 import 'package:sme/ui/channel_partener_page.dart';
+import 'package:sme/ui/events_page.dart';
+import 'package:sme/ui/gallery_page.dart';
 import 'package:sme/ui/home_page.dart';
 import 'package:sme/ui/instantiated_page.dart';
 import 'package:sme/ui/login_page.dart';
@@ -25,23 +28,25 @@ class _StartPageState extends State<StartPage> {
   _getDrawerItemWidget(int pos) {
     switch (pos) {
       case 0:
-        return new HomePage();
+        return HomePage();
       case 1:
-        return new InstantiatedPage();
+        return InstantiatedPage();
       case 2:
-        return new RegisterPage();
+        return LoginScreen();
       case 3:
-        return new LoginScreen();
+        return MembershipPage();
       case 4:
-        return new MembershipPage();
+        return AboutPage();
       case 5:
-        return new ChannelPartenerPage();
+        return GalleryPage();
       case 6:
-        return new SectorPage();
+        return EventPage();
       case 7:
-        return new ServicesPage();
+        return SectorPage();
       case 8:
-        return new MeetingsPage();
+        return ServicesPage();
+      case 9:
+        return MeetingsPage();
       default:
         return Center(
             child: Text(
@@ -59,7 +64,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     var drawerOptions = <Widget>[];
     for (var i = 0; i < drawerItems.length; i++) {
-      if (i == 2 || i == 5) {
+      if (i == 2 || i == 4) {
         drawerOptions
             .add(Divider(thickness: 1, color: Theme.of(context).primaryColor));
       }
@@ -83,26 +88,38 @@ class _StartPageState extends State<StartPage> {
             textDirection: TextDirection.ltr,
             children: <Widget>[
               UserAccountsDrawerHeader(
+
                   accountName: Text(
-                    "SME Rahul Shrivastava",
+                    "Rahul Srivastava",
                     maxLines: 1,
                     style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 20.0,
-                        letterSpacing: 1.2),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,),
                   ),
-                  accountEmail: Text(
-                    'Facebook : SME business forum',
-                    style: TextStyle(
-                        color: CupertinoColors.white,
-                        fontWeight: FontWeight.normal,
-                        fontSize: 14.0),
-                  ),
+
                   currentAccountPicture: Icon(
                     CupertinoIcons.profile_circled,
-                    size: 70,
+                    size: 80,
                     color: Colors.white,
                   ),
+
+                  accountEmail: Container(
+                    child: Row(
+                        children: <Widget>[
+                          Icon(Icons.alternate_email, color: Colors.white,),
+                          SizedBox(width: 5),
+                          Text('rahulsrivastava@gmail.com', style: textSmall(),)
+                        ],
+                    ),
+                  ),
+
+                  arrowColor: Colors.redAccent,
+
+                  otherAccountsPictures: <Widget>[
+                    Icon(CupertinoIcons.profile_circled,color: Colors.white, size: 40,),
+                    Icon(CupertinoIcons.profile_circled, color: Colors.white60, size: 40,),
+                  ],
+
                   decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       color: Theme.of(context).primaryColor)),

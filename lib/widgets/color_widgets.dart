@@ -187,41 +187,92 @@ Widget horizontalCircleList(BuildContext context) {
     itemCount: data.length,
     scrollDirection: Axis.horizontal,
     itemBuilder: (context, index) {
+      return GestureDetector(
+        onTap: _navToDetail(data[index]),
+        child: Center(
+            child: Container(
+          padding: EdgeInsets.all(8),
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    //shape: BoxShape.circle,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30))
+                  ),
+                  child: Icon(
+                    data[index].icon,
+                    color: Colors.white60,
+                    size: 60,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 5),
+                  width: 100,
+                  child: Text(data[index].title,
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                          letterSpacing: 1.1,
+                          fontWeight: FontWeight.bold)),
+                )
+              ],
+            ),
+          ),
+        )
+            //)
+            ),
+      );
+    },
+  );
+}
+
+_navToDetail(DataOpportunity data ) {
+  debugPrint(data.title);
+}
+
+
+Widget horizontalCirclePartnerList(BuildContext context) {
+  return ListView.builder(
+    itemCount: partnerList.length,
+    scrollDirection: Axis.horizontal,
+    itemBuilder: (context, index) {
       return Center(
           child: Container(
-        padding: EdgeInsets.all(8),
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  data[index].icon,
-                  color: Colors.white60,
-                  size: 60,
-                ),
+            padding: EdgeInsets.all(8),
+            child: Container(
+              child: Column(
+                children: <Widget>[
+
+                  Container( width: 100, height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[400],
+                      //shape: BoxShape.circle,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30))
+                    ),
+                    child: Image.asset(partnerList[index].preview, width: 60, height: 60,)
+                  ),
+
+                  Container(
+                    padding: EdgeInsets.only(top: 5),
+                    width: 100,
+                    child: Text(partnerList[index].title, maxLines: 3,
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.black,
+                            letterSpacing: 1.1,
+                            fontWeight: FontWeight.bold)),
+                  )
+
+                ],
               ),
-              Container(
-                padding: EdgeInsets.only(top: 5),
-                width: 100,
-                child: Text(data[index].title,
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black,
-                        letterSpacing: 1.1,
-                        fontWeight: FontWeight.bold)),
-              )
-            ],
-          ),
-        ),
-      )
-          //)
-          );
+            ),
+          )
+        //)
+      );
     },
   );
 }
