@@ -11,8 +11,8 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
 
   List<AboutModel> aboutList = [
-    AboutModel(
-        'VISION',
+
+    AboutModel('VISION',
         [
           "Provide networking platform to Entrepreneurs and Senior Executives from Small, Medium, Large Industrial and Allied Business Sectors, MNCs, Government PSUs, Government Agencies and Start-ups to establish & enhance business contacts, exchange business leads & enquiries, identify business & investment partners, introduction of unique products and services, promotion, marketing and branding, establish Joint Venture or Alliance, show-case innovation & inventions and share new business ideas and concepts to convert into commercial benefits",
           'Turnover upto Rs. 25 crore (Silver Category)',
@@ -23,8 +23,8 @@ class _AboutPageState extends State<AboutPage> {
           'To create groups of Mid & Large Corporates who are interested to establish contacts with SMEs to buy and sell, avail services and other business co-operation'
         ],
         CupertinoIcons.add),
-    AboutModel(
-        'MISSION',
+
+    AboutModel('MISSION',
         [
           'To connect entrepreneurs from various parts of India',
           'To set-up Chapters & Groups at various cities of India',
@@ -36,28 +36,37 @@ class _AboutPageState extends State<AboutPage> {
           'To create databank of emerging & potential SMEs',
           'To brand innovative ideas, products & services at National & International levels',
           'To set-up Global SME Business Forum at London, Dubai, Shanghai, Hong Kong, Tokyo, Frankfurt, Singapore, Milan, New York, Chicago and Los Angeles by 2020',
-        ], CupertinoIcons.add),
-    AboutModel('OBJECTIVES', [
-      "The main objective of SME Business Forum is to provide opportunities to entrepreneurs, business tycoons, Government officials, CEOs of top corporates & MNCs, thought leaders, initiator of ideas, master of minds, professionals, innovators, business coaches and experts from various industrial sectors, finance, technology, banking, marketing, branding, media, International Trade, Projects, IT, Digital Media, policy makers and Diplomats to share their experiences, thoughts, knowledge, unique ideas and other useful information to enhance skill, capacity, capabilities, reach and scale of members of SME Business Forum.",
-      'KEY POINTS\nIdentify & Connect with new business partners',
-      'Exchange business leads & enquiries',
-      'Brand and market new products & services',
-      'Identify suppliers, buyers and manufacturers',
-      'Channelise investment, finance, venture capital or private equity',
-      'Provide Referral Business and recommendations',
-      'Establish Business Partnership',
-      'To organise Executive Training Programs',
-      'Commercialise business ideas and concepts'
-    ], CupertinoIcons.add),
-    AboutModel('ACTIVITIES', ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
+        ],
         CupertinoIcons.add),
-    AboutModel('FOUNDER', ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
+
+    AboutModel('OBJECTIVES',
+        [
+          "The main objective of SME Business Forum is to provide opportunities to entrepreneurs, business tycoons, Government officials, CEOs of top corporates & MNCs, thought leaders, initiator of ideas, master of minds, professionals, innovators, business coaches and experts from various industrial sectors, finance, technology, banking, marketing, branding, media, International Trade, Projects, IT, Digital Media, policy makers and Diplomats to share their experiences, thoughts, knowledge, unique ideas and other useful information to enhance skill, capacity, capabilities, reach and scale of members of SME Business Forum.",
+          'KEY POINTS\nIdentify & Connect with new business partners',
+          'Exchange business leads & enquiries',
+          'Brand and market new products & services',
+          'Identify suppliers, buyers and manufacturers',
+          'Channelise investment, finance, venture capital or private equity',
+          'Provide Referral Business and recommendations',
+          'Establish Business Partnership',
+          'To organise Executive Training Programs',
+          'Commercialise business ideas and concepts'
+        ],
         CupertinoIcons.add),
-    AboutModel('MANAGEMENT TEAM',
-        ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'], CupertinoIcons.add),
+
+    AboutModel('ACTIVITIES',
+        ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
+        CupertinoIcons.add),
+
+    AboutModel('FOUNDER',
+        ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
+        CupertinoIcons.add),
+
+    AboutModel(
+        'MANAGEMENT TEAM',
+        ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
+        CupertinoIcons.add),
   ];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -93,16 +102,14 @@ class _AboutPageState extends State<AboutPage> {
     for (String content in vehicle.contents)
       columnContent.add(
         new ListTile(
-          title: new Text(
+          title: Text(
             content,
             style: textSmall(),
           ),
-          leading: new Icon(vehicle.icon),
+          leading: new Icon(Icons.adjust, color: Colors.blue,),
         ),
       );
 
     return columnContent;
   }
 }
-
-

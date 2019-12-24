@@ -95,31 +95,26 @@ class _StartPageState extends State<StartPage> {
                   ),
                   currentAccountPicture: Icon(
                     CupertinoIcons.profile_circled,
-                    size: 80,
+                    size: 100,
                     color: Colors.white,
                   ),
-                  accountEmail: Container(
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.alternate_email,
-                          color: Colors.white,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'rahulsrivastava@gmail.com',
-                          style: textSmall(),
-                        )
-                      ],
-                    ),
-                  ),
+//                  accountEmail: Container(
+//                    child: Row(
+//                      children: <Widget>[
+//                        Icon(
+//                          Icons.alternate_email,
+//                          color: Colors.white,
+//                        ),
+//                        SizedBox(width: 5),
+//                        Text(
+//                          'rahulsrivastava@gmail.com',
+//                          style: textSmall(),
+//                        )
+//                      ],
+//                    ),
+//                  ),
                   arrowColor: Colors.redAccent,
                   otherAccountsPictures: <Widget>[
-                    Icon(
-                      CupertinoIcons.profile_circled,
-                      color: Colors.white,
-                      size: 40,
-                    ),
                     Icon(
                       CupertinoIcons.profile_circled,
                       color: Colors.white60,
