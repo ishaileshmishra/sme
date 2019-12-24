@@ -20,7 +20,6 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
-
   int _selectedDrawerIndex = 0;
 
   _getDrawerItemWidget(int pos) {
@@ -86,38 +85,47 @@ class _StartPageState extends State<StartPage> {
             textDirection: TextDirection.ltr,
             children: <Widget>[
               UserAccountsDrawerHeader(
-
                   accountName: Text(
                     "Rahul Srivastava",
                     maxLines: 1,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.0,),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
                   ),
-
                   currentAccountPicture: Icon(
                     CupertinoIcons.profile_circled,
                     size: 80,
                     color: Colors.white,
                   ),
-
                   accountEmail: Container(
                     child: Row(
-                        children: <Widget>[
-                          Icon(Icons.alternate_email, color: Colors.white,),
-                          SizedBox(width: 5),
-                          Text('rahulsrivastava@gmail.com', style: textSmall(),)
-                        ],
+                      children: <Widget>[
+                        Icon(
+                          Icons.alternate_email,
+                          color: Colors.white,
+                        ),
+                        SizedBox(width: 5),
+                        Text(
+                          'rahulsrivastava@gmail.com',
+                          style: textSmall(),
+                        )
+                      ],
                     ),
                   ),
-
                   arrowColor: Colors.redAccent,
-
                   otherAccountsPictures: <Widget>[
-                    Icon(CupertinoIcons.profile_circled,color: Colors.white, size: 40,),
-                    Icon(CupertinoIcons.profile_circled, color: Colors.white60, size: 40,),
+                    Icon(
+                      CupertinoIcons.profile_circled,
+                      color: Colors.white,
+                      size: 40,
+                    ),
+                    Icon(
+                      CupertinoIcons.profile_circled,
+                      color: Colors.white60,
+                      size: 40,
+                    ),
                   ],
-
                   decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       color: Theme.of(context).primaryColor)),

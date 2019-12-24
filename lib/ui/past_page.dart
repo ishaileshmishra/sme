@@ -22,11 +22,12 @@ class _PastPageState extends State<PastPage> {
           SizedBox(
             height: 50, child: ListView.builder(
                 scrollDirection: Axis.horizontal,
+                reverse: true,
                 itemCount: years.length,
                 itemBuilder: (context, index){
                   return Container(
-                    margin: EdgeInsets.only(top: 10),
-                    height: 100, width: 150,
+                    margin: EdgeInsets.only(left:8, top: 10),
+                    height: 100, width: 80,
                     decoration: BoxDecoration(
                       color: Colors.blue[300],
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(30), bottomRight: Radius.circular(30))
@@ -41,22 +42,19 @@ class _PastPageState extends State<PastPage> {
           SizedBox( height: 10),
 
           SizedBox(
-            height: MediaQuery.of(context).size.height-200,
+            height: MediaQuery.of(context).size.height-250,
             child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: years.length,
                 itemBuilder: (context, index){
                   return Container(
-                    margin: EdgeInsets.only(top: 10, left: 10, right: 10),
-                    height: 80, width: 100,
                     decoration: BoxDecoration(
-                        color: Colors.blue[300],
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30))
+                      borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
-                    child: Center(
-                      child: Text(years[index], style: textRegular()),
+                    child: Card(
+                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(years[index], style: textRegular(),
+                      ),
                     ),
                   );
                 }),
