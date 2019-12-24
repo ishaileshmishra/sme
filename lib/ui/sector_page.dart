@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sme/widgets/text_widgets.dart';
 
 class SectorPage extends StatefulWidget {
+
   @override
   _SectorPageState createState() => _SectorPageState();
 }
@@ -9,6 +10,7 @@ class SectorPage extends StatefulWidget {
 class _SectorPageState extends State<SectorPage> {
 
   final List<String> listSectors = [
+
     'All Kinds of Manufacturing Industries',
     "All Kinds of Service Industries",
     'Agro & Food Processing Industry',
@@ -35,6 +37,7 @@ class _SectorPageState extends State<SectorPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       padding: EdgeInsets.all(12),
       child: ListView.builder(
@@ -43,11 +46,12 @@ class _SectorPageState extends State<SectorPage> {
           itemBuilder: (context, index) {
             return Card(
               child: ListTile(
-                onTap: () => print('Tapped'),
+                onTap: () => print('tapped'),
                 title: Text(listSectors[index], style: textRegular()),
               ),
             );
           }),
     );
+
   }
 }
