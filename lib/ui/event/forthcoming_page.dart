@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sme/ui/event_page.dart';
+import 'package:sme/ui/event/event_page.dart';
 import 'package:sme/ui/exhibition_page.dart';
 
 class ForthcomingPage extends StatefulWidget {

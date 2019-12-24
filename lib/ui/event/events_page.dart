@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sme/ui/forthcoming_page.dart';
-import 'package:sme/ui/past_page.dart';
+import 'package:sme/ui/event/forthcoming_page.dart';
+import 'package:sme/ui/event/past_page.dart';
 import 'package:sme/widgets/text_widgets.dart';
 
 class EventPage extends StatefulWidget {
