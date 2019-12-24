@@ -7,7 +7,7 @@ import 'package:sme/ui/gallery_page.dart';
 import 'package:sme/ui/home_page.dart';
 import 'package:sme/ui/instantiated_page.dart';
 import 'package:sme/ui/login/login_page.dart';
-import 'package:sme/ui/membership_page.dart';
+import 'package:sme/ui/member_partner/member/membership_page.dart';
 import 'package:sme/ui/meeting/mettings_page.dart';
 import 'package:sme/ui/sector_page.dart';
 import 'package:sme/ui/services_page.dart';
@@ -67,12 +67,18 @@ class _StartPageState extends State<StartPage> {
       }
       var item = drawerItems[i];
       drawerOptions.add(
+
         ListTile(
+
           leading: new Icon(item.icon, size: 30),
+
           title: new Text(item.title, style: textSmall()),
+
           selected: i == _selectedDrawerIndex,
+
           onTap: () => _onSelectItem(i),
         ),
+
       );
     }
 
@@ -83,8 +89,11 @@ class _StartPageState extends State<StartPage> {
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             textDirection: TextDirection.ltr,
+
             children: <Widget>[
+
               UserAccountsDrawerHeader(
+
                   accountName: Text(
                     "Rahul Srivastava",
                     maxLines: 1,
@@ -93,37 +102,31 @@ class _StartPageState extends State<StartPage> {
                       fontSize: 20.0,
                     ),
                   ),
+
+
                   currentAccountPicture: Icon(
                     CupertinoIcons.profile_circled,
                     size: 100,
                     color: Colors.white,
                   ),
-//                  accountEmail: Container(
-//                    child: Row(
-//                      children: <Widget>[
-//                        Icon(
-//                          Icons.alternate_email,
-//                          color: Colors.white,
-//                        ),
-//                        SizedBox(width: 5),
-//                        Text(
-//                          'rahulsrivastava@gmail.com',
-//                          style: textSmall(),
-//                        )
-//                      ],
-//                    ),
-//                  ),
+
+
                   arrowColor: Colors.redAccent,
                   otherAccountsPictures: <Widget>[
+
                     Icon(
                       CupertinoIcons.profile_circled,
                       color: Colors.white60,
                       size: 40,
                     ),
+
                   ],
+
+
                   decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: Theme.of(context).primaryColor)),
+                      shape: BoxShape.rectangle, color: Theme.of(context).primaryColor)),
+
+
               Container(
                 //margin: EdgeInsets.all(12),
                 child: Column(children: drawerOptions),

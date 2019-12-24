@@ -98,3 +98,7 @@ class AboutModel {
   final IconData icon;
   AboutModel(this.title, this.contents, this.icon);
 }
+
+
+
+final String membership = "SME Business Forum would like to invite you to enrol as the member to explore new business opportunities at State & National Level, exchange business leads & inquiries, business referrals, identify new business partners & clients, channelise bank finance, Export / Import finance, venture capital, private equity & investment, export business enquiries, import facilitation, launching and marketing of new products and services at various SME Business Forum activities. SME Business Forum is a dynamic business networking platform of India, established on 3rd May 2008 by SME Chamber of India, providing opportunities to Entrepreneurs, Buyers, Manufacturers, Suppliers, Investors, Distributors, Franchisees, Service providers and Senior Executives of mid-corporates, large corporates, MNCs, Government agencies and PSUs for business connectivity. SME Members are taking advantages & benefits of the Forum at various chapters – Mumbai, Pune, Ahmedabad, Bangalore, Nashik, Chennai, Rajkot, Hyderabad, Vadodara and Surat as per the business activities & interest for business growth and expansion.";
