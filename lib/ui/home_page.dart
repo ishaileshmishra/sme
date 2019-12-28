@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
 
           Container(
             padding: EdgeInsets.only(left: 20, top: 10),
-            child: SizedBox(height: 160, child: horizontalCircleList(context)),
+            child: SizedBox(height: 180, child: horizontalCircleList(context)),
           ),
 
           // Launched BY

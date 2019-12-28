@@ -11,7 +11,6 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
 
   List<AboutModel> aboutList = [
-
     AboutModel('VISION',
         [
           "Provide networking platform to Entrepreneurs and Senior Executives from Small, Medium, Large Industrial and Allied Business Sectors, MNCs, Government PSUs, Government Agencies and Start-ups to establish & enhance business contacts, exchange business leads & enquiries, identify business & investment partners, introduction of unique products and services, promotion, marketing and branding, establish Joint Venture or Alliance, show-case innovation & inventions and share new business ideas and concepts to convert into commercial benefits",
@@ -23,7 +22,6 @@ class _AboutPageState extends State<AboutPage> {
           'To create groups of Mid & Large Corporates who are interested to establish contacts with SMEs to buy and sell, avail services and other business co-operation'
         ],
         CupertinoIcons.add),
-
     AboutModel('MISSION',
         [
           'To connect entrepreneurs from various parts of India',
@@ -38,7 +36,6 @@ class _AboutPageState extends State<AboutPage> {
           'To set-up Global SME Business Forum at London, Dubai, Shanghai, Hong Kong, Tokyo, Frankfurt, Singapore, Milan, New York, Chicago and Los Angeles by 2020',
         ],
         CupertinoIcons.add),
-
     AboutModel('OBJECTIVES',
         [
           "The main objective of SME Business Forum is to provide opportunities to entrepreneurs, business tycoons, Government officials, CEOs of top corporates & MNCs, thought leaders, initiator of ideas, master of minds, professionals, innovators, business coaches and experts from various industrial sectors, finance, technology, banking, marketing, branding, media, International Trade, Projects, IT, Digital Media, policy makers and Diplomats to share their experiences, thoughts, knowledge, unique ideas and other useful information to enhance skill, capacity, capabilities, reach and scale of members of SME Business Forum.",
@@ -53,15 +50,12 @@ class _AboutPageState extends State<AboutPage> {
           'Commercialise business ideas and concepts'
         ],
         CupertinoIcons.add),
-
     AboutModel('ACTIVITIES',
         ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
         CupertinoIcons.add),
-
     AboutModel('FOUNDER',
         ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
         CupertinoIcons.add),
-
     AboutModel(
         'MANAGEMENT TEAM',
         ['Vehicle no. 3', 'Vehicle no. 4', 'Vehicle no. 6'],
@@ -76,15 +70,11 @@ class _AboutPageState extends State<AboutPage> {
         itemBuilder: (context, i) {
           return ExpansionTile(
             title: Container(
-              padding: EdgeInsets.all(12),
+              padding: EdgeInsets.only(left: 12, top: 12, bottom: 12),
               decoration: BoxDecoration(
-                  color: Theme.of(context).canvasColor,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      bottomRight: Radius.circular(30))),
-              child: ListTile(
-                title: Text(aboutList[i].title, style: textRegular()),
+                color: Colors.grey[200]
               ),
+              child: Text(aboutList[i].title, style: textSmall())
             ),
             children: <Widget>[
               new Column(

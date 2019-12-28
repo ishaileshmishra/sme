@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_banner_swiper/flutter_banner_swiper.dart';
 import 'package:sme/models/drawer_model.dart';
+import 'package:sme/widgets/text_widgets.dart';
 
 Widget smeActionBar() {
   return AppBar(
@@ -57,26 +59,27 @@ final kBoxDecorationStyle = BoxDecoration(
 
 Widget applicationBar(BuildContext context, String title) {
   return AppBar(
-    elevation: 2,
+    elevation: 0,
     title: Text(
       title,
-      style: TextStyle(
-          fontWeight: FontWeight.bold, color: Colors.white, fontSize: 21.0),
+      style: textRegular(),
     ),
     centerTitle: true,
     leading: Builder(
         builder: (context) => IconButton(
               icon: Image.asset('assets/images/menu.png',
-                  height: 30, width: 30,
-                  color: Colors.white), //Icon(Icons.view_list, color: Colors.white,),
+                  height: 30,
+                  width: 30,
+                  color: Colors
+                      .white), //Icon(Icons.view_list, color: Colors.white,),
               onPressed: () => Scaffold.of(context).openDrawer(),
             )),
     actions: <Widget>[
       IconButton(
         icon: Icon(
-          Icons.picture_in_picture_alt,
+          CupertinoIcons.collections,
           color: Colors.white,
-          size: 30,
+          size: 20,
         ),
         tooltip: 'Gallery',
         padding: EdgeInsets.only(right: 12),
@@ -185,46 +188,47 @@ Widget horizontalCircleList(BuildContext context) {
     itemCount: data.length,
     scrollDirection: Axis.horizontal,
     itemBuilder: (context, index) {
-      return GestureDetector(
-        onTap: _navToDetail(data[index]),
-        child: Center(
+
+        return Center(
             child: Container(
-          padding: EdgeInsets.all(8),
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
+              padding: EdgeInsets.all(8),
+              child: Container(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
                       color: Colors.blue,
-                      //shape: BoxShape.circle,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
                           bottomRight: Radius.circular(30))),
+
                   child: Icon(
                     data[index].icon,
                     color: Colors.white60,
                     size: 60,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 5),
-                  width: 100,
-                  child: Text(data[index].title,
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                          letterSpacing: 1.1,
-                          fontWeight: FontWeight.bold)),
+
+                GestureDetector(
+                  onTap: _navToDetail(data[index]),
+                  child: Container(
+                    padding: EdgeInsets.only(top: 5),
+                    width: 100,
+                    child: Text(data[index].title, maxLines: 2,
+                        style: TextStyle( fontSize: 14,
+                            color: Colors.black,
+                            letterSpacing: 1.1,
+                            fontWeight: FontWeight.bold)),
+                  ),
                 )
               ],
             ),
           ),
         )
             //)
-            ),
-      );
+            );
     },
   );
 }
@@ -245,8 +249,7 @@ Widget horizontalCirclePartnerList(BuildContext context) {
           child: Column(
             children: <Widget>[
               Container(
-                  width: 100,
-                  height: 100,
+                  width: 100, height: 100,
                   decoration: BoxDecoration(
                       color: Colors.grey[400],
                       //shape: BoxShape.circle,

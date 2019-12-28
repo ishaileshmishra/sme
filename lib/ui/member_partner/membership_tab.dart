@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sme/models/drawer_model.dart';
-import 'package:sme/ui/member_partner/partner/chapter_form.dart';
+import 'package:sme/ui/member_partner/member/chapter_form.dart';
 import 'package:sme/widgets/text_widgets.dart';
 
 class MembershipTab extends StatefulWidget {

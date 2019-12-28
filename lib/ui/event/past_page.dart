@@ -17,6 +17,7 @@ class _PastPageState extends State<PastPage> {
 
     return Container(
       child: Column(
+
         children: <Widget>[
 
           SizedBox(
@@ -27,12 +28,12 @@ class _PastPageState extends State<PastPage> {
                 itemBuilder: (context, index){
                   return Container(
                     margin: EdgeInsets.only(left:8, top: 10),
-                    height: 100, width: 80,
+                    height: double.infinity, width: 80,
                     decoration: BoxDecoration(
                       color: Colors.orange,
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                     child: Center(
-                      child: Text(years[index], style: textRegular()),
+                      child: Text(years[index], style: textSmall()),
                     ),
                   );
                 }),
@@ -51,7 +52,7 @@ class _PastPageState extends State<PastPage> {
                       borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
                     child: Card(
-                      margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                     // margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: ListTile(
                         onTap: ()=> debugPrint('Hi Everyone'),
                         title: Text(years[index], style: textSmall()),

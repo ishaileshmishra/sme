@@ -99,7 +99,7 @@ class _StartPageState extends State<StartPage> {
                     maxLines: 1,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
+                      fontSize: 15.0,
                     ),
                   ),
 
