@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sme/models/drawer_model.dart';
-import 'package:sme/ui/about_page.dart';
+import 'package:sme/ui/others/about_page.dart';
 import 'package:sme/ui/event/events_page.dart';
-import 'package:sme/ui/gallery_page.dart';
-import 'package:sme/ui/home_page.dart';
-import 'package:sme/ui/instantiated_page.dart';
+import 'package:sme/ui/others/gallery_page.dart';
+import 'package:sme/ui/others/home_page.dart';
+import 'package:sme/ui/others/instantiated_page.dart';
 import 'package:sme/ui/login/login_page.dart';
 import 'package:sme/ui/member_partner/member/membership_page.dart';
 import 'package:sme/ui/meeting/mettings_page.dart';
-import 'package:sme/ui/sector_page.dart';
-import 'package:sme/ui/services_page.dart';
+import 'package:sme/ui/others/sector_page.dart';
+import 'package:sme/ui/others/services_page.dart';
 import 'package:sme/widgets/color_widgets.dart';
 import 'package:sme/widgets/text_widgets.dart';
 
