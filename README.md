@@ -1,4 +1,4 @@
-# SME Demo Application
+# SME Application
 
 A new Flutter application.
 
